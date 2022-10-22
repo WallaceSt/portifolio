@@ -37,11 +37,13 @@ const LanguageSelector = ({ language }) =>
 const TopBar = () =>
     <nav className="p-3 bg-gray-800 fixed top-0 w-full">
         <ul className="flex gap-6 px-6">
-            <li className="text-2xl text-white ease-in duration-300 hover:cursor-pointer hover:text-blue-400"><BsGithub /></li>
-            <li className="text-2xl text-white ease-in duration-300 hover:cursor-pointer hover:text-blue-400"><BsLinkedin /></li>
+            <TopBarIcon icon={<BsGithub />} />
+            <TopBarIcon icon={<BsLinkedin />} />
         </ul>
     </nav>
 
+const TopBarIcon = ({ icon }) => 
+    <li className="text-2xl text-white ease-in duration-300 hover:cursor-pointer hover:text-blue-400">{icon}</li>
 
 const NavBar = () =>
     <section>
